@@ -1,1 +1,30 @@
+package inventario;
 
+/**
+ * Clase que representa un producto dentro del inventario.
+ * Sigue el principio de encapsulamiento.
+ */
+public class Producto {
+    private String id;
+    private String nombre;
+    private int cantidad;
+    private double precio;
+
+    public Producto(String id, String nombre, int cantidad, double precio) {
+        this.id = id;
+        this.nombre = nombre;
+        this.cantidad = cantidad;
+        this.precio = precio;
+    }
+
+    // Getters y Setters
+    public String getNombre() { return nombre; }
+    public int getCantidad() { return cantidad; }
+    public void setCantidad(int cantidad) { this.cantidad = cantidad; }
+
+    @Override
+    public String toString() {
+        return String.format("ID: %s | Producto: %s | Stock: %d | Precio: $%.2f", 
+                id, nombre, cantidad, precio);
+    }
+}
